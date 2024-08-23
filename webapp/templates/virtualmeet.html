@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | MEDIEASE</title>
+    <link rel="stylesheet" type="text/css" href="vm.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-title">
+            <img src='https://cdn-icons-png.flaticon.com/512/4807/4807695.png' alt="Mediease Logo" class="logo">
+            <div class="header-title">
+                <h1>MEDIEASE</h1>
+            </div>
+        </div>
+        <nav>
+            <a href="login" class="login-btn">Login</a>
+            <a href="signup" class="signup-btn">Signup</a>
+        </nav>
+    </header>
+    <ul>
+        <li>
+            <nav class="hel">
+            <a href="/homepage">
+                <img src='https://cdn-icons-png.flaticon.com/512/9385/9385212.png' alt="Home Icon" class="home-icon">
+                Home
+            </a>
+        </li>
+        <li>
+            <a class="100" href="#">
+                <img src='https://cdn-icons-png.flaticon.com/512/2875/2875035.png' alt="Home Icon" class="home-icon">
+                 Doctor Consultancy 
+                </a>
+            <ul class="sub-menu">
+                <li><a href="/bookanappointment">Book an Appointment</a></li>
+              <li><a href="/virtualmeet">Virtual Meet</a></li>
+            </ul>
+        </li>
+        <li><a href="/userprofile"> User Profile </a></li>
+        <li><a href="#"> Fitness </a>
+        <ul class="sub-menu">
+            <li><a href="walking">Walking</a></li>
+            <li><a href="exercise">Exercise</a></li>
+            <li><a href="/">Mediease AI</a></li>
+            <li><a href="waterdrop">Drinking Water</a></li>
+            <li><a href="/cycle">Cycling</a></li>
+            <li><a href="bodymassindex">BMI(Body Mass Index)</a></li>
+        </ul>
+    </li>
+        <li><a href="about"> 
+            <img src='https://cdn-icons-png.flaticon.com/512/52/52349.png' alt="Home Icon" class="home-icon">
+            About 
+        </a></li>
+        <li><a href="contactus">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/ojnjgkun.json"
+    trigger="hover"
+    style="width:27px;height:27px"
+    alt="Home Icon" class="home-icon">
+</lord-icon>         
+            Contact Us </a></li>
+    </nav>
+    </ul>    
+    <div class="meeting-header">
+        <h1>Schedule a Meeting</h1>
+    </div>
+<!-- Meeting form container -->
+<div class="form-container">
+    <form action="/create-meeting" method="post">
+        <!-- Meeting name with "Topic" -->
+        <label for="meeting-name">Topic:</label>
+        <input type="text" name="meeting-name" id="meeting-name" placeholder="Enter Meeting Name" required>
+        
+        <!-- From time and Date -->
+        <div class="input-group">
+            <div>
+                <label for="from-time">From:</label>
+                <input type="time" name="from-time" id="from-time" required>
+            </div>
+            <div>
+                <label for="meeting-date">Date:</label>
+                <input type="date" name="meeting-date" id="meeting-date" required>
+            </div>
+        </div>
+
+        <!-- To time and Date -->
+        <div class="input-group">
+            <div>
+                <label for="to-time">To:</label>
+                <input type="time" name="to-time" id="to-time" required>
+            </div>
+            <div>
+                <label for="meeting-date-to">Date:</label>
+                <input type="date" name="meeting-date-to" id="meeting-date-to" required>
+            </div>
+        </div>
+
+<label for="timezone">Timezone:</label>
+<select name="timezone" id="timezone" required>
+    <option value="GMT-12">(GMT-12:00) International Date Line West</option>
+    <option value="GMT-11">(GMT-11:00) Midway Island, Samoa</option>
+    <option value="GMT-10">(GMT-10:00) Hawaii</option>
+    <option value="GMT-9">(GMT-09:00) Alaska</option>
+    <option value="GMT-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+    <option value="GMT-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+    <option value="GMT-6">(GMT-06:00) Central Time (US & Canada), Mexico City</option>
+    <option value="GMT-5">(GMT-05:00) Eastern Time (US & Canada), Bogota, Lima</option>
+    <option value="GMT-4">(GMT-04:00) Atlantic Time (Canada), Caracas, La Paz</option>
+    <option value="GMT-3.5">(GMT-03:30) Newfoundland</option>
+    <option value="GMT-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+    <option value="GMT-2">(GMT-02:00) Mid-Atlantic</option>
+    <option value="GMT-1">(GMT-01:00) Azores, Cape Verde Islands</option>
+    <option value="GMT+0">(GMT+00:00) Greenwich Mean Time, Dublin, Edinburgh, Lisbon, London</option>
+    <option value="GMT+1">(GMT+01:00) Amsterdam, Berlin, Brussels, Madrid, Paris</option>
+    <option value="GMT+2">(GMT+02:00) Athens, Bucharest, Istanbul, Cairo</option>
+    <option value="GMT+3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+    <option value="GMT+3.5">(GMT+03:30) Tehran</option>
+    <option value="GMT+4">(GMT+04:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+    <option value="GMT+4.5">(GMT+04:30) Kabul</option>
+    <option value="GMT+5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+    <option value="GMT+5.5">(GMT+05:30) Mumbai, Kolkata, Chennai, New Delhi</option>
+    <option value="GMT+5.75">(GMT+05:45) Kathmandu</option>
+    <option value="GMT+6">(GMT+06:00) Almaty, Dhaka, Colombo</option>
+    <option value="GMT+6.5">(GMT+06:30) Yangon (Rangoon)</option>
+    <option value="GMT+7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+    <option value="GMT+8">(GMT+08:00) Beijing, Perth, Singapore, Hong Kong</option>
+    <option value="GMT+9">(GMT+09:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+    <option value="GMT+9.5">(GMT+09:30) Adelaide, Darwin</option>
+    <option value="GMT+10">(GMT+10:00) Brisbane, Melbourne, Sydney, Guam</option>
+    <option value="GMT+11">(GMT+11:00) Magadan, Solomon Islands, New Caledonia</option>
+    <option value="GMT+12">(GMT+12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+</select>
+
+
+        <!-- Add more input fields as needed -->
+
+<a href="https://teams.live.com/meet/9578080632533?p=8GHn5uyqgjbF2cvP" class="button" target="_blank">Schedule Meeting</a>
+    </form>
+</div>
+<footer class="c-footer">
+    <div class="footer-left">
+        <h3>Connect with Us</h3>
+        <!-- Add social media icons/links here -->
+        <a href="https://www.instagram.com/mediease_ts/" target="_blank">
+            <img src='https://cdn.discordapp.com/attachments/1143051446489731154/1195393851251241100/icons8-facebook-96.png?ex=65b3d447&is=65a15f47&hm=82cdb082d07c7a9af8a97f46d5ec6d735e734660c156edcdb97ea0644e796b3f&' alt="Facebook Icon" class="social-icon">
+            Facebook
+        </a>
+        <br>
+        <a href="https://www.instagram.com/mediease_ts/" target="_blank">
+            <img src='https://cdn.discordapp.com/attachments/1143051446489731154/1195395290526666762/icons8-instagram-96.png?ex=65b3d59e&is=65a1609e&hm=ef5337e5f7533123eed2d04b9968add557672e366bdf8d76e2486279fe31a111&' alt="Facebook Icon" class="social-icon">
+            Instagram
+        </a>
+        <br>
+        <a href="https://www.youtube.com/@Cure_Craft" target="_blank">
+            <img src='https://cdn.discordapp.com/attachments/1143051446489731154/1195395145961590784/icons8-youtube-96.png?ex=65b3d57c&is=65a1607c&hm=1962a969c1426c70edeab88ef8d9a3f1154bc0f4b64099cbcab7876ba843ab57&' alt="Facebook Icon" class="social-icon">
+            YouTube
+        </a>
+    </div>
+    <div class="footer-right">
+        <h3>Contact Information</h3>
+        <!-- Add contact information here -->
+        <p>Email: help.mediease@gmail.com</p>
+        <p>Phone: +91 76010 69687, +91 81215 82817</p>
+    </div>
+</footer>
+</body>
+</html>

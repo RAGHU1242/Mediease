@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Optional: Include Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Login | Mediease</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <script src="script.js"></script>
+    <header class="header">
+        <div class="logo-title">
+            <img src='https://cdn-icons-png.flaticon.com/512/4807/4807695.png' alt="Mediease Logo" class="logo">
+            <div class="header-title">
+                <h1>MEDIEASE</h1>
+            </div>
+        </div>
+        <nav>
+            <a href="login" class="login-btn">Login</a>
+            <a href="signup" class="signup-btn">Signup</a>
+        </nav>
+    </header>
+    <ul>
+        <li>
+            <nav class="hel">
+            <a href="/homepage">
+                <img src='https://cdn-icons-png.flaticon.com/512/9385/9385212.png' alt="Home Icon" class="home-icon">
+                Home
+            </a>
+        </li>
+        <li>
+            <a class="100" href="#">
+                <img src='https://cdn-icons-png.flaticon.com/512/2875/2875035.png' alt="Home Icon" class="home-icon">
+                 Doctor Consultancy 
+                </a>
+            <ul class="sub-menu">
+                <li><a href="#">Virtual Meet</a></li>
+                <li><a href="/bookanappointment">Book an Appointment</a></li>
+            </ul>
+        </li>
+        <li><a href="/userprofile"> User Profile </a></li>
+        <li><a href="/Homepage"> Fitness </a>
+        <ul class="sub-menu">
+            <li><a href="walking">Walking</a></li>
+            <li><a href="exercise">Exercise</a></li>
+            <li><a href="/">Mediease AI</a></li>
+            <li><a href="waterdrop">Drinking Water</a></li>
+            <li><a href="/cycle">Cycling</a></li>
+            <li><a href="bodymassindex">BMI(Body Mass Index)</a></li>
+        </ul>
+    </li>
+        <li><a href="about"> 
+            <img src='https://cdn-icons-png.flaticon.com/512/52/52349.png' alt="Home Icon" class="home-icon">
+            About 
+        </a></li>
+        <li><a href="contactus">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/ojnjgkun.json"
+    trigger="hover"
+    style="width:27px;height:27px"
+    alt="Home Icon" class="home-icon">
+</lord-icon>         
+            Contact Us </a></li>
+    </nav>
+    </ul> 
+
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <img src='https://cdn-icons-png.flaticon.com/512/4807/4807695.png'
+                                            class="logo" alt="Mediease Logo">
+                                        <h4 class="mt-1 mb-5 pb-1">Mediease</h4>
+                                    </div>
+
+                                    <div class="form">
+                                        <!-- Email  -->
+                                        <div class="email">
+                                            <label for="email">Email</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                class="form-control"
+                                                placeholder="Enter your email"
+                                                required
+                                            />
+                                        </div>
+                                        <br>
+                                        <!-- Password -->
+                                        <div class="pass">
+                                            <label for="password">Password</label>
+                                            <input
+                                                type="password"
+                                                name="password"
+                                                id="password"
+                                                class="form-control"
+                                                placeholder="Enter your Password"
+                                                required
+                                            />
+                                        </div>
+                                    <br>
+                                        <!-- Sign In button -->
+                                        <div class="forgot-password">
+                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 mt-2" type="button" id="submit-btn" onclick="signIn()">Sign In</button>
+                                        <a class="text-muted" href="#!">Forgot password?</a>
+                                    </div>
+                                    <br>
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-5">Don't have an account?</p>
+                                            <button type="button" class="btn btn-outline-danger" onclick="window.location.href='signup'">Create new</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <h4 class="mb-4">This is more than a Project</h4>
+                                    <p class="small mb-0">MEDIEASE is a cutting-edge project developed by Team Quantums as part of the Gemini API Hackathon. Our website leverages the powerful Gemini API to enhance healthcare through innovative technology, delivering a seamless and user-friendly experience.</p>
+                                    <p class="small mb-0">Our project aligns with the Sustainable Development Goal of "Good Health and Well-Being," reflecting our commitment to improving health outcomes through advanced web development.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="c-footer">
+        <div class="footer-left">
+            <h3>Connect with Us</h3>
+            <!-- Add social media icons/links here -->
+            <a href="https://www.instagram.com/mediease_ts/" target="_blank">
+                <img src='https://cdn.discordapp.com/attachments/1143051446489731154/1195393851251241100/icons8-facebook-96.png?ex=65b3d447&is=65a15f47&hm=82cdb082d07c7a9af8a97f46d5ec6d735e734660c156edcdb97ea0644e796b3f&' alt="Facebook Icon" class="social-icon">
+                Facebook
+            </a>
+            <br>
+            <a href="https://www.instagram.com/mediease_ts/" target="_blank">
+                <img src='https://cdn.discordapp.com/attachments/1143051446489731154/1195395290526666762/icons8-instagram-96.png?ex=65b3d59e&is=65a1609e&hm=ef5337e5f7533123eed2d04b9968add557672e366bdf8d76e2486279fe31a111&' alt="Facebook Icon" class="social-icon">
+                Instagram
+            </a>
+            <br>
+            <a href="https://www.youtube.com/@Cure_Craft" target="_blank">
+                <img src='https://cdn.discordapp.com/attachments/1143051446489731154/1195395145961590784/icons8-youtube-96.png?ex=65b3d57c&is=65a1607c&hm=1962a969c1426c70edeab88ef8d9a3f1154bc0f4b64099cbcab7876ba843ab57&' alt="Facebook Icon" class="social-icon">
+                YouTube
+            </a>
+        </div>
+        <div class="footer-right">
+            <h3>Contact Information</h3>
+            <!-- Add contact information here -->
+            <p>Email: help.mediease@gmail.com</p>
+            <p>Phone: +91 76010 69687, +91 81215 82817</p>
+        </div>
+    </footer>
+</body>
+</html>
